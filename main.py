@@ -73,7 +73,7 @@ if device_id != "":
         #message = can.Message(arbitration_id=0x201, data=[0x02, 0x00, 0x00, 0x17, 0x17], is_extended_id=False)
         #message = can.Message(arbitration_id=0x241, data=[0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01], is_extended_id=False)
         
-        #message = candapter.readCANMessage()
+        message = candapter.readCANMessage()
         if message is not None:
             print(device_data_readable(db, device_id_int, default_id_int, message))
         
